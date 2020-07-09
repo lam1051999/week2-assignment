@@ -4,7 +4,7 @@ import {
   SEND_MESSAGE_COLOR,
   SCREEN_WIDTH,
   SCREEN_HEIGHT,
-} from "./Constants";
+} from "../constants/Constants";
 
 import { StyleSheet } from "react-native";
 

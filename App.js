@@ -8,20 +8,20 @@ import {
   SafeAreaView,
 } from "react-native";
 import { Ionicons, Entypo, AntDesign } from "@expo/vector-icons";
-import { AppStyles as styles } from "./constants/Styles";
-import { POLO_BLUE_COLOR } from "./constants/Constants";
+import { AppStyles as styles } from "./src/styles/Styles";
+import { POLO_BLUE_COLOR } from "./src/constants/Constants";
 
 const images = [
-  { id: 1, uri: require("./assets/1.jpeg") },
-  { id: 2, uri: require("./assets/2.jpeg") },
-  { id: 3, uri: require("./assets/3.jpeg") },
-  { id: 4, uri: require("./assets/4.jpeg") },
-  { id: 5, uri: require("./assets/5.jpeg") },
-  { id: 6, uri: require("./assets/6.jpeg") },
-  { id: 7, uri: require("./assets/7.jpeg") },
-  { id: 8, uri: require("./assets/8.jpeg") },
-  { id: 9, uri: require("./assets/9.jpeg") },
-  { id: 10, uri: require("./assets/10.jpeg") },
+  { id: 1, uri: require("./src/assets/1.jpeg") },
+  { id: 2, uri: require("./src/assets/2.jpeg") },
+  { id: 3, uri: require("./src/assets/3.jpeg") },
+  { id: 4, uri: require("./src/assets/4.jpeg") },
+  { id: 5, uri: require("./src/assets/5.jpeg") },
+  { id: 6, uri: require("./src/assets/6.jpeg") },
+  { id: 7, uri: require("./src/assets/7.jpeg") },
+  { id: 8, uri: require("./src/assets/8.jpeg") },
+  { id: 9, uri: require("./src/assets/9.jpeg") },
+  { id: 10, uri: require("./src/assets/10.jpeg") },
 ];
 
 const centerId = Math.round(images.length / 2);
@@ -39,7 +39,7 @@ export default function App() {
             <Image
               style={styles.infoImage}
               resizeMode="cover"
-              source={require("./assets/avatar1.jpeg")}
+              source={require("./src/assets/avatar1.jpeg")}
             />
           </View>
           <View style={styles.infoWrapper}>
