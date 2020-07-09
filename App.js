@@ -1,15 +1,15 @@
 import React from "react";
 import {
-  StyleSheet,
   Text,
   View,
   TouchableOpacity,
   ScrollView,
   Image,
   SafeAreaView,
-  Dimensions,
 } from "react-native";
 import { Ionicons, Entypo, AntDesign } from "@expo/vector-icons";
+import { AppStyles as styles } from "./constants/Styles";
+import { POLO_BLUE_COLOR } from "./constants/Constants";
 
 const images = [
   { id: 1, uri: require("./assets/1.jpeg") },
@@ -25,12 +25,6 @@ const images = [
 ];
 
 const centerId = Math.round(images.length / 2);
-
-const POLO_BLUE_COLOR = "rgb(51,60,87)";
-const FOLLOW_COLOR = "rgb(71,113,246)";
-const SEND_MESSAGE_COLOR = "rgb(120,213,250)";
-const SCREEN_HEIGHT = Dimensions.get("window").height;
-const SCREEN_WIDTH = Dimensions.get("window").width;
 
 export default function App() {
   return (
@@ -106,123 +100,3 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    paddingHorizontal: 20,
-    paddingTop: 10,
-  },
-  headerIconsContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 20,
-  },
-  infoContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  infoImageContainer: {
-    width: 110,
-    height: 110,
-  },
-  infoImage: {
-    flex: 1,
-    width: null,
-    height: null,
-    borderRadius: 100,
-  },
-  infoWrapper: {
-    paddingHorizontal: 10,
-  },
-  infoName: {
-    fontWeight: "bold",
-    fontSize: 25,
-    color: POLO_BLUE_COLOR,
-    paddingHorizontal: 5,
-  },
-  infoJob: {
-    fontSize: 15,
-    color: "grey",
-    paddingHorizontal: 5,
-    paddingBottom: 20,
-  },
-  infoButtons: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  infoButton1: {
-    height: 30,
-    width: 120,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 20,
-    backgroundColor: FOLLOW_COLOR,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-    elevation: 9,
-  },
-  infoButton2: {
-    height: 30,
-    marginLeft: 10,
-    width: 60,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 20,
-    backgroundColor: SEND_MESSAGE_COLOR,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-    elevation: 9,
-  },
-  accountInfoContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingVertical: 25,
-    paddingHorizontal: 10,
-  },
-  accountInfoItem: {
-    alignItems: "center",
-  },
-  itemNumber: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: POLO_BLUE_COLOR,
-  },
-  itemText: {
-    fontSize: 17,
-    color: "grey",
-  },
-  galleryContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  galleryCol: {},
-  imageContainer: {
-    width: (SCREEN_WIDTH - 40) / 2 - 5,
-    height: SCREEN_HEIGHT / 3,
-    marginVertical: 5,
-  },
-  image: {
-    flex: 1,
-    width: null,
-    height: null,
-    borderRadius: 10,
-  },
-  bottomIconsContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingHorizontal: 50,
-    paddingVertical: 10,
-  },
-});
