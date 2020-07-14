@@ -108,16 +108,16 @@ export const AppStyles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  galleryCol: {},
+  galleryCol: {
+    flex: 1,
+  },
   imageContainer: {
-    width: (SCREEN_WIDTH - 40) / 2 - 5,
-    height: SCREEN_HEIGHT / 3.5,
+    justifyContent: "center",
+    alignItems: "center",
     marginVertical: 5,
   },
   image: {
     flex: 1,
-    width: null,
-    height: null,
     borderRadius: 10,
   },
   bottomIconsContainer: {

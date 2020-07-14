@@ -10,6 +10,7 @@ import {
 import { Ionicons, Entypo, AntDesign } from "@expo/vector-icons";
 import { AppStyles as styles } from "./src/styles/Styles";
 import { POLO_BLUE_COLOR } from "./src/constants/Constants";
+import { SCREEN_WIDTH } from "./src/constants/Constants";
 
 const images = [
   { id: 1, uri: require("./src/assets/1.jpeg") },
@@ -25,6 +26,17 @@ const images = [
 ];
 
 const centerId = Math.round(images.length / 2);
+function ImageItem({ uri }) {
+  const imageWidth = (SCREEN_WIDTH - 40) / 2 - 5;
+  const imageProps = Image.resolveAssetSource(uri);
+  const imageHeight = (imageProps.height / imageProps.width) * imageWidth;
+  return (
+    <Image
+      source={uri}
+      style={[styles.image, { width: imageWidth, height: imageHeight }]}
+    />
+  );
+}
 
 export default function App() {
   return (
@@ -79,14 +91,14 @@ export default function App() {
           <View style={styles.galleryCol}>
             {images.slice(0, centerId).map((item) => (
               <View key={item.id} style={styles.imageContainer}>
-                <Image source={item.uri} style={styles.image} />
+                <ImageItem uri={item.uri} />
               </View>
             ))}
           </View>
           <View style={styles.galleryCol}>
             {images.slice(centerId).map((item) => (
               <View key={item.id} style={styles.imageContainer}>
-                <Image source={item.uri} style={styles.image} />
+                <ImageItem uri={item.uri} />
               </View>
             ))}
           </View>
